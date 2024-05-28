@@ -10,19 +10,24 @@
                         {{ __('berita') }}
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('berita.create') }}" class="btn btn-sm btn-outline-primary">Tambah Data</a>
+                        <form action="{{ route('berita.index') }}" method="post">
+                            @csrf
+                            <a href="{{ route('berita.create') }}" class="btn btn-sm btn-outline-primary">Tambah
+                                Data</a>
+                           
+                        </form>
                     </div>
                 </div>
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table id="dataTable" class="table">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Judul</th>
+                                    <th>Judul berita</th>
                                     <th>Isi Berita</th>
-                                    <th>Tanggal & waktu</th>
+                                    <th>Tanggal</th>
                                     <th>Penulis</th>
                                     <th>Kategori</th>
                                     <th>Status</th>
@@ -37,7 +42,7 @@
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $data->judul }}</td>
                                     <td>{{ $data->isi_berita }}</td>
-                                    <td>{!! $data->tanggal !!}</td>
+                                    <td>{{ $data->tanggal }}</td>
                                     <td>{{$data->penulis->nama}}</td>
                                     <td>{{$data->kategori->nama}}</td>
                                     <td>{{ $data->status}}</td>
@@ -67,8 +72,8 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        {!! $berita->withQueryString()->links('pagination::bootstrap-4') !!}
-                    </div>
+
+                        </div>
                 </div>
             </div>
         </div>
