@@ -18,4 +18,7 @@ class berita extends Model
     public function kategori(){
     return $this->belongsTo(Kategori::class, 'id_penulis');
     }
+    public function User(){
+        return $this->hasMany(User::class, 'id_user');
+    }
 }
