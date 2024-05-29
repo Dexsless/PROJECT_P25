@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\KomentarController;
+use App\Models\Berita;
+use App\Models\komentar;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $berita = Berita::all();
+    return view('welcome', compact('berita'));
+});
+Route::get('/tampilan', function () {
+    $berita = Berita::all();
+    return view('tampilan', compact('berita'));
 });
 
 Auth::routes();
