@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $berita = Berita::all();
+    return view('welcome', compact('berita'));
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('penulis', App\Http\Controllers\PenulisController::class)->middleware('auth');
-Route::resource('kategori', App\Http\Controllers\KategoriController::class)->middleware('auth');
-Route::resource('berita', App\Http\Controllers\BeritaController::class)->middleware('auth');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
+    Route::resource('penulis', App\Http\Controllers\PenulisController::class);
+    Route::resource('kategori', App\Http\Controllers\KategoriController::class);
+    Route::resource('berita', App\Http\Controllers\BeritaController::class);
+});
