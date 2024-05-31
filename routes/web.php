@@ -1,5 +1,8 @@
 <?php
+
+use App\Http\Controllers\WelcomeController;
 use App\Models\Berita;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
     $berita = Berita::all();
     return view('welcome', compact('berita'));
 });

@@ -16,7 +16,7 @@ body {
 	color: #ffffff;
 	text-rendering: optimizeLegibility;
 	font-weight: initial;
-  
+
 }
 
 .dark {
@@ -510,12 +510,142 @@ a.sidebar-link:hover {
     transform: rotate(45deg);
     transition: all .2s ease-out;
 }
+.navbar-nav{
+width: 100%;
+}
+
+@media(min-width:568px){
+.end{
+margin-left: auto;
+}
+}
+
+@media(max-width:768px){
+#post{
+width: 100%;
+}
+}
+#clicked{
+padding-top: 1px;
+padding-bottom: 1px;
+text-align: center;
+width: 100%;
+background-color: #ecb21f;
+border-color: #a88734 #9c7e31 #846a29;
+color: black;
+border-width: 1px;
+border-style: solid;
+border-radius: 13px;
+}
+
+#profile{
+background-color: unset;
+
+}
+
+#post{
+margin: 10px;
+padding: 6px;
+padding-top: 2px;
+padding-bottom: 2px;
+text-align: center;
+background-color: #ecb21f;
+border-color: #a88734 #9c7e31 #846a29;
+color: black;
+border-width: 1px;
+border-style: solid;
+border-radius: 13px;
+width: 50%;
+}
+
+body{
+background-color: black;
+}
+
+#nav-items li a,#profile{
+text-decoration: none;
+color: rgb(224, 219, 219);
+background-color: black;
+}
+
+
+.comments{
+margin-top: 5%;
+margin-left: 20px;
+}
+
+.darker{
+border: 1px solid #ecb21f;
+background-color: black;
+float: right;
+border-radius: 5px;
+padding-left: 40px;
+padding-right: 30px;
+padding-top: 10px;
+}
+
+.comment{
+border: 1px solid rgba(16, 46, 46, 1);
+background-color: rgba(16, 46, 46, 0.973);
+float: left;
+border-radius: 5px;
+padding-left: 40px;
+padding-right: 30px;
+padding-top: 10px;
+
+}
+.comment h4,.comment span,.darker h4,.darker span{
+display: inline;
+}
+
+.comment p,.comment span,.darker p,.darker span{
+color: rgb(184, 183, 183);
+}
+
+h1,h4{
+color: white;
+font-weight: bold;
+}
+label{
+color: rgb(212, 208, 208);
+}
+
+#align-form{
+margin-top: 20px;
+}
+.form-group p a{
+color: white;
+}
+
+#checkbx{
+background-color: black;
+}
+
+#darker img{
+margin-right: 15px;
+position: static;
+}
+
+.form-group input,.form-group textarea{
+background-color: black;
+border: 1px solid rgba(16, 46, 46, 1);
+border-radius: 12px;
+}
+
+form{
+border: 1px solid rgba(16, 46, 46, 1);
+background-color: rgba(16, 46, 46, 0.973);
+border-radius: 5px;
+padding: 20px;
+}
 }
 
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<script src="js/app.js"></script>
+<script src="">
+
+</script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -534,20 +664,12 @@ a.sidebar-link:hover {
     <div class="wrapper">
         <aside id="sidebar">
             <div class="d-flex">
-                <button class="toggle-btn" type="button">
-                    <i class="lni lni-grid-alt"></i>
-                </button>
+
                 <div class="sidebar-logo">
-                    <a href="#">CodzSword</a>
+                    <a href="#"></a>
                 </div>
             </div>
             <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Profile</span>
-                    </a>
-                </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link">
                         <i class="lni lni-agenda"></i>
@@ -562,40 +684,20 @@ a.sidebar-link:hover {
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Login</a>
+                            <a href="/login" class="sidebar-link">Login</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Register</a>
+                            <a href="/register" class="sidebar-link">Register</a>
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                        <i class="lni lni-layout"></i>
-                        <span>Multi Level</span>
-                    </a>
-                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
-                                Two Links
-                            </a>
-                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Link 1</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Link 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+
+
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="#1" class="sidebar-link">
                         <i class="lni lni-popup"></i>
-                        <span>Notification</span>
+                        <span>Komentar</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -605,21 +707,20 @@ a.sidebar-link:hover {
                     </a>
                 </li>
             </ul>
-            <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-exit"></i>
-                    <span>Logout</span>
-                </a>
-            </div>
+
         </aside>
         <div class="main p-3">
-            <div class="text-center text-light">
+            <div class=" text-light">
                 <h1>
+                    <center>
                     BERITA TERKINI
+                    </center>
                 </h1>
-                
+
                 @foreach ($berita as $data )
                 <br>
+                <br>
+
 		<article class="postcard dark blue">
 			<a class="postcard__img_link" href="#">
 				<img class="postcard__img" src="{{asset('/storage/beritas/'. $data->image)}}" alt="Image Title" />
@@ -642,6 +743,128 @@ a.sidebar-link:hover {
 			</div>
 		</article>
         @endforeach
+
+        <footer class="text-center text-lg-start text-white" style="background-color: #110f16;">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <hr class="my-3">
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Company name
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer
+                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                            <p>
+                                <a class="text-white">MDBootstrap</a>
+                            </p>
+                            <p>
+                                <a class="text-white">MDWordPress</a>
+                            </p>
+                            <p>
+                                <a class="text-white">BrandFlow</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Bootstrap Angular</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a class="text-white">Your Account</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Become an Affiliate</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Shipping Rates</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Help</a>
+                            </p>
+                        </div>
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> Jawa Barat, Indonesia</p>
+                            <p><i class="fas fa-envelope mr-3"></i> ryandgopnk@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> +62 857 9338 5150</p>
+
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <hr class="my-3">
+
+                <!-- Section: Copyright -->
+                <section class="p-3 pt-0">
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div class="p-3">
+                                © 2024 Copyright:
+                                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                </section>
+                <!-- Section: Copyright -->
+            </div>
+            <!-- Grid container -->
+        </footer>
+        <!-- Footer -->
             </div>
         </div>
     </div>
@@ -651,37 +874,7 @@ a.sidebar-link:hover {
     <script src="script.js"></script>
 
 
-<section class="dark">
 
-	<div class="container py-4">
-		<h1 class="h1 text-center text-light" id="pageHeaderTitle">BERITA TERKINI</h1>
-
-@foreach ($berita as $data )
-		<article class="postcard dark blue">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="{{asset('/storage/beritas/'. $data->image)}}" alt="Image Title" />
-			</a>
-			<div class="postcard__text">
-				<h1 class="postcard__title blue"><a href="#">{{$data->judul}}</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>{{$data->tanggal}}
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">{{$data->isi_berita}}</div>
-				<ul class="postcard__tagbox">
-
-					<li class="tag__item play blue">
-						<a href="#"><i class="fas fa-play mr-2"></i>Selengkapnya</a>
-					</li>
-				</ul>
-			</div>
-		</article>
-        @endforeach
-	</div>
-
-</section>
 
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -690,148 +883,5 @@ a.sidebar-link:hover {
 <!-- Remove the container if you want to extend the Footer to full width. -->
 
   <!-- Footer -->
-  <footer
-          class="text-center text-lg-start text-white"
-          style="background-color: #110f16;"
-          >
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Links -->
-      <hr class="my-3">
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-              Company name
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-            <p>
-              <a class="text-white">MDBootstrap</a>
-            </p>
-            <p>
-              <a class="text-white">MDWordPress</a>
-            </p>
-            <p>
-              <a class="text-white">BrandFlow</a>
-            </p>
-            <p>
-              <a class="text-white">Bootstrap Angular</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-              Useful links
-            </h6>
-            <p>
-              <a class="text-white">Your Account</a>
-            </p>
-            <p>
-              <a class="text-white">Become an Affiliate</a>
-            </p>
-            <p>
-              <a class="text-white">Shipping Rates</a>
-            </p>
-            <p>
-              <a class="text-white">Help</a>
-            </p>
-          </div>
-
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> Jawa Barat, Indonesia</p>
-            <p><i class="fas fa-envelope mr-3"></i> ryandgopnk@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> +62 857 9338 5150</p>
-            
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-
-      <hr class="my-3">
-
-      <!-- Section: Copyright -->
-      <section class="p-3 pt-0">
-        <div class="row d-flex align-items-center">
-          <!-- Grid column -->
-          <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
-            <div class="p-3">
-              © 2024 Copyright:
-              <a class="text-white" href="https://mdbootstrap.com/"
-                 >MDBootstrap.com</a
-                >
-            </div>
-            <!-- Copyright -->
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-            <!-- Facebook -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-facebook-f"></i
-              ></a>
-
-            <!-- Twitter -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-twitter"></i
-              ></a>
-
-            <!-- Google -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-google"></i
-              ></a>
-
-            <!-- Instagram -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-instagram"></i
-              ></a>
-          </div>
-          <!-- Grid column -->
-        </div>
-      </section>
-      <!-- Section: Copyright -->
-    </div>
-    <!-- Grid container -->
-  </footer>
-  <!-- Footer -->
 
 
- 
